@@ -20,6 +20,14 @@ namespace University_Management_System
             get { return facId; }
             set { facId = value; }
         }
+        private double hourPerWeek;
+
+        public double HourPerWeek
+        {
+            get { return hourPerWeek; }
+            set { hourPerWeek = value; }
+        }
+
         private Section[]sections;
 
         private int sectionCount;

@@ -54,18 +54,23 @@ namespace University_Management_System
             facultyCount = 0;
 
         }
-        public void AddSection(Section sec)
-        {   if (sectionCount < 50)
-                sections[sectionCount++] = sec;
-            else
-                Console.WriteLine("Section is full");
-        }
-        public void AddFaculty(Faculty fac)
+        public void AddSection(params Section[] sections)
         {
-            if (facultyCount < 1000)
-                faculties[facultyCount++] = fac;
-            else
-                Console.WriteLine("Faculty is full");
+            foreach(var sec in sections)
+        { if (sectionCount < 50)
+                   this.sections[sectionCount++] = sec;
+                else
+                    Console.WriteLine("Section is full");
+            }
+        }
+        public void AddFaculty(params Faculty[] faculties)
+        { foreach (var fac in faculties)
+            {
+                if (facultyCount < 1000)
+                 this.faculties[facultyCount++] = fac;
+                else
+                    Console.WriteLine("Faculty is full");
+            }
         }
         public void ShowSectionDetails()
         {
@@ -76,7 +81,7 @@ namespace University_Management_System
         public void ShowFacultyDetails()
         {
             for (int i = 0; i < facultyCount; i++)
-                faculties[i].ShowInfo2();
+               this. faculties[i].ShowInfo2();
 
         }
         public void ShowInfo3()

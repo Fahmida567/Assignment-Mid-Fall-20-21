@@ -13,6 +13,15 @@ namespace University_Management_System
             get { return departmentName; }
             set { departmentName = value; }
         }
+       
+        private int numberOfCourse;
+
+        public int NumberOfCourse
+        {
+            get { return numberOfCourse; }
+            set { numberOfCourse = value; }
+        }
+
         private string departmentId;
 
         public string DepartmentId
@@ -66,6 +75,7 @@ namespace University_Management_System
         {
             Console.WriteLine(" Deprtment Name is:" + departmentName);
             Console.WriteLine(" Department Id is " + departmentId);
+            Console.WriteLine("Total Course:" + numberOfCourse);
 
         }
 
